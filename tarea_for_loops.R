@@ -4,18 +4,18 @@ listaDocumentos <- list(c("mp","Juan","Christofer"),c("of","av01","ampr"),c("of"
                         c("mp","Antonia"),c("mp","Christian","Mario"),
                         c("mp","Jose","Pedro","Antonela"),c("of","av05","meca"),
                         c("of","av04","dape"),c("of","av02","arme"))
-contarmp <- 0
-contarof <- 0
+mp <- 0
+of <- 0
 
 ##Ejercicio 1##
-contarmp <- 0
-contarof <- 0
+mp <- 0
+of <- 0
 
 
 for(vector in listaDocumentos){
   if(vector[1]=="mp"){
-    contarmp <- contarmp +1
-    vector <- vectores[-1]
+    mp <- mp +1
+    vector <- vector[-1]
     print(paste("Se cuenta con mp",length(vector),"de ninos"))
   }else{
     contarof <- contarof +1
@@ -30,22 +30,22 @@ for(vector in listaDocumentos){
     vector <- vector[-1]
     print(vector)
   }else{
-    contarmp <- contarmp +1
+    mp <- mp +1
   }
 }
 
 ###Ejercicio 3 ###
 
 
-contarof <- 0
+of <- 0
 aprobado <- 0
 reprobado <- 0
 
 for (vector in listaDocumentos){
   if(vector[1]=="of"){
-    contarof <- contarof +1
+    of <- of +1
     nuevoVector <- vector[-1]
-    if(nuevosvectores[2:3]=="ante"){
+    if(nuevoVector[2:3]=="ante"){
       reprobado <- reprobado +1
     }else if(nuevoVector[2:3]=="dape"||nuevoVector[2:3]=="ampr"||nuevoVector[2:3]=="meca"||nuevoVector[2:3]=="arme"){
       aprobado <- aprobado +1
