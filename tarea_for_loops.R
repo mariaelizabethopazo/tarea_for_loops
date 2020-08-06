@@ -12,11 +12,11 @@ contarmp <- 0
 contarof <- 0
 
 
-for(vectores in listaDocumentos){
-  if(vectores[1]=="mp"){
+for(vector in listaDocumentos){
+  if(vector[1]=="mp"){
     contarmp <- contarmp +1
-    vectores <- vectores[-1]
-    print(paste("Se cuenta con mp",length(vectores),"de ninos"))
+    vector <- vectores[-1]
+    print(paste("Se cuenta con mp",length(vector),"de ninos"))
   }else{
     contarof <- contarof +1
   }
@@ -25,10 +25,10 @@ for(vectores in listaDocumentos){
 
 ###Ejercicio 2####
 
-for(vectores in listaDocumentos){
-  if(vectores[1]=="of"){
-    vectores <- vectores[-1]
-    print(vectores)
+for(vector in listaDocumentos){
+  if(vector[1]=="of"){
+    vector <- vector[-1]
+    print(vector)
   }else{
     contarmp <- contarmp +1
   }
@@ -41,13 +41,13 @@ contarof <- 0
 aprobado <- 0
 reprobado <- 0
 
-for (vectores in listaDocumentos){
-  if(vectores[1]=="of"){
+for (vector in listaDocumentos){
+  if(vector[1]=="of"){
     contarof <- contarof +1
-    nuevosvectores <- vectores[-1]
+    nuevoVector <- vector[-1]
     if(nuevosvectores[2:3]=="ante"){
       reprobado <- reprobado +1
-    }else if(nuevosvectores[2:3]=="dape"||nuevosvectores[2:3]=="ampr"||nuevosvectores[2:3]=="meca"||nuevosvectores[2:3]=="arme"){
+    }else if(nuevoVector[2:3]=="dape"||nuevoVector[2:3]=="ampr"||nuevoVector[2:3]=="meca"||nuevoVector[2:3]=="arme"){
       aprobado <- aprobado +1
     }
   }
