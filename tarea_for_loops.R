@@ -8,6 +8,9 @@ contarmp <- 0
 contarof <- 0
 
 ##Ejercicio 1##
+contarmp <- 0
+contarof <- 0
+
 
 for(vectores in listaDocumentos){
   if(vectores[1]=="mp"){
